@@ -8,12 +8,39 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var message = "Hello World"
+    @State private var icon = "globe"
+    @State private var labelColor: Color = .red
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Spacer()
+            
+            Label(message, systemImage: icon)
+                .font(.title)
+                .frame(maxWidth: .infinity, maxHeight: 75)
+                .background(labelColor)
+                .cornerRadius(5)
+            
+            Spacer()
+            
+            Button("Change Text"){
+                if message == "Hello World" {
+                    message = "App Development"
+                    icon = "app"
+                    labelColor = .blue
+                } else {
+                    message = "Hello World"
+                    icon = "globe"
+                    labelColor = .red
+
+                }
+                
+            }
+            .font(.title)
+            
+            Spacer()
         }
         .padding()
     }
