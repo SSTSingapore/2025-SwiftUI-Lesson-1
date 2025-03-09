@@ -12,18 +12,29 @@ struct ContentView: View {
     @State private var message = "Hello World"
     @State private var icon = "globe"
     @State private var labelColor: Color = .red
+<<<<<<< Updated upstream
     @State private var profile = false
     @State private var name = "Stanley"
+=======
+    @State private var visibility = false
+    private var name = "Stanley"
+>>>>>>> Stashed changes
     
     var body: some View {
         VStack {
             Spacer()
+<<<<<<< Updated upstream
             
             Text("Hello \(name)").font(.title)
                 .foregroundColor(profile ? .black : .white)
             
             Spacer()
             
+=======
+            Text("Stanley")
+                .font(.title)
+                .foregroundColor(visibility ? .black : .white)
+>>>>>>> Stashed changes
             Label(message, systemImage: icon)
                 .font(.title)
                 .frame(maxWidth: .infinity, maxHeight: 75)
@@ -51,11 +62,18 @@ struct ContentView: View {
             }
             .font(.title)
             
+<<<<<<< Updated upstream
             Picker("Profile", selection: $profile) {
                 Text("Off").tag(false)
                 Text("On").tag(true)
             }.pickerStyle(.segmented)
             
+=======
+            Picker("Profile", selection: $visibility) {
+                Text("Off").tag(false)
+                Text("On").tag(true)
+            }.pickerStyle(.segmented)
+>>>>>>> Stashed changes
             Spacer()
         }
         .padding()
