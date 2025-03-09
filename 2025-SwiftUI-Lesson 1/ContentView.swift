@@ -30,6 +30,10 @@ struct ContentView: View {
                     message = "App Development"
                     icon = "app"
                     labelColor = .blue
+                } else if message == "App Development" {
+                    message = "SST Inc"
+                    icon = "graduationcap"
+                    labelColor = .green
                 } else {
                     message = "Hello World"
                     icon = "globe"
